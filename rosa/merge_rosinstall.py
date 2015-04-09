@@ -36,10 +36,10 @@ def merge_into_workspace(workspace, uris):
 
     if newconfig:
         cmd_persist_config(newconfig, rosinstall_name)
-        cmd_install_or_update(newconfig)
+        cmd_install_or_update(newconfig, verbose=True)
     else:
         config = get_config(rosinstall_path, config_filename=rosinstall_name)
-        cmd_install_or_update(config)
+        cmd_install_or_update(config, verbose=True)
 
 
 def install_dependencies(workspace):
